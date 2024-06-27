@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2theXR1MzdxYzY3enQzN2p1dmhlM2hlbW5tczFnczhqMWZ5aDY2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SNqMaNLvuWewXyH187/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.background-image-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTkzd21yeW55ZXljdXIyMGhmeHNocGU4OXVoYXgwNW5uZng4ZmNxMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QvkiKTmk9JysXjCxdr/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20%;
+}
+
+button {
+    background-color: #ff69b4;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+#cursor-effect-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff69b4;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
